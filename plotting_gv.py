@@ -297,9 +297,14 @@ def validate_regression(pred, test, title):
     MAE {}
     MSE {}
     RMSE {}
-    '''.format(round(np.mean(bias), 2), round(np.std(bias), 2), len(estimated), round(mse, 2), round(slope, 2), round(r_value, 2), 
-        round(r2, 2), round(mae, 2), round(mse, 2), round(rmse, 2))
-
+    '''.format(
+        round(np.mean(bias), 2),
+        round(np.std(bias), 2),
+        round(r2, 2),
+        round(mae, 2),
+        round(mse, 2),
+        round(rmse, 2),
+    )
     axs[1].annotate(statsvals, xy=(0.6, 0.5), xycoords='axes fraction', color='black')
     axs[1].grid()
 
